@@ -9,7 +9,7 @@ header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-   
+    color: #fff;
 }
 
 .dsmovie-nav-content h1{
@@ -27,7 +27,8 @@ header{
 }
 .dsmovie-contact-link{
         margin:0 0 0 10px;
-        font-size:12px;    
+        font-size:12px; 
+        font-weight: 400;  
 }
 /* Removingo underline on contact info*/
 .dsmovie-nav-href{
