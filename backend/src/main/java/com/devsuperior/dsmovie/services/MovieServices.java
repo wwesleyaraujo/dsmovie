@@ -1,10 +1,14 @@
 package com.devsuperior.dsmovie.services;
 
+import java.util.Iterator;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.IdGenerator;
 
 import com.devsuperior.dsmovie.dto.MovieDTO;
 import com.devsuperior.dsmovie.entities.Movie;
@@ -20,6 +24,13 @@ public class MovieServices {
 	public Page<MovieDTO> findAll(Pageable pageable) {
 		Page<Movie> result = repository.findAll(pageable);
 		Page<MovieDTO> page = result.map(x->new MovieDTO(x));
+		return page;
+	}
+	
+	@Transactional(readOnly =true)
+	public Page<MovieDTO> findAllSorted(Pageable pageble) {
+		Page<Movie> result = repository.findAll(repository.page1);
+		Page<MovieDTO> page =  result.map(x->new MovieDTO(x));
 		return page;
 	}
 	
