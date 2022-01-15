@@ -25,22 +25,23 @@ function Pagination( {page, onChange } : Props) {
                     </button>
                 </div>
 
-                    <div className="dsmovie-pagination-button-List" > 
-                    <p> Order by: </p>
-                    <ul> 
-                        <li>   
+                <div className="dsmovie-pagination-button-List" > 
+                   
+                    
+                    <p> Ordenar: </p>
+                       
                             <Link to={"/sortCount#"}> 
-                                 <button> Count </button> 
+                                 <button> Mais votados </button> 
                             </Link>  
                             <Link to={"/sortName#"}> 
-                                 <button> Name </button>
+                                 <button> Por nome </button>
                            </Link>
                            <Link to={"/sortScore#"}>
-                                <button> Nota </button> 
-                           </Link></li>
-                    </ul>
-                   </div>
+                                <button> Melhor avaliados </button> 
+                           </Link>
+                </div>
             </div>
+            
         </div>
     );
 }
