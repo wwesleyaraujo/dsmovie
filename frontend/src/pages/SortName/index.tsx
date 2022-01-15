@@ -5,7 +5,7 @@ import { BASE_URL } from "utils/requests";
 import Pagination from "../../components/Pagination";
 import { MoviePage } from "types/movies";
 
-function Sort() {
+function SortName() {
 
 
 
@@ -25,14 +25,6 @@ function Sort() {
     });
     useEffect(() => {
       axios.get(`${BASE_URL}/sortName`)
-        .then(response => {
-          const data = response.data as MoviePage;
-          setPage(data);
-        });
-    }, [pageNumber]);
-
-    useEffect(() => {
-      axios.get(`${BASE_URL}/sortCount`)
         .then(response => {
           const data = response.data as MoviePage;
           setPage(data);
@@ -59,4 +51,4 @@ function Sort() {
     );
   }
   
-  export default Sort;
+  export default SortName;

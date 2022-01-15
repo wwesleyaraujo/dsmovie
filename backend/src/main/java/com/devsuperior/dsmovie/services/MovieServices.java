@@ -28,8 +28,20 @@ public class MovieServices {
 	}
 	
 	@Transactional(readOnly =true)
-	public Page<MovieDTO> findAllSorted(Pageable pageble) {
-		Page<Movie> result = repository.findAll(repository.page1);
+	public Page<MovieDTO> findAllSortedByName(Pageable pageble) {
+		Page<Movie> result = repository.findAll(repository.pageByTitle);
+		Page<MovieDTO> page =  result.map(x->new MovieDTO(x));
+		return page;
+	}
+	@Transactional(readOnly =true)
+	public Page<MovieDTO> findAllSortedByScore(Pageable pageble) {
+		Page<Movie> result = repository.findAll(repository.pageByScore);
+		Page<MovieDTO> page =  result.map(x->new MovieDTO(x));
+		return page;
+	}
+	@Transactional(readOnly =true)
+	public Page<MovieDTO> findAllSortedByCount(Pageable pageble) {
+		Page<Movie> result = repository.findAll(repository.pageByCount);
 		Page<MovieDTO> page =  result.map(x->new MovieDTO(x));
 		return page;
 	}

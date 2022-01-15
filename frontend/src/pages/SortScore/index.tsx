@@ -5,7 +5,7 @@ import { BASE_URL } from "utils/requests";
 import Pagination from "../../components/Pagination";
 import { MoviePage } from "types/movies";
 
-function Sort() {
+function SortScore() {
 
 
 
@@ -24,21 +24,13 @@ function Sort() {
       empty: true
     });
     useEffect(() => {
-      axios.get(`${BASE_URL}/sortName`)
+      axios.get(`${BASE_URL}/sortScore`)
         .then(response => {
           const data = response.data as MoviePage;
           setPage(data);
         });
     }, [pageNumber]);
 
-    useEffect(() => {
-      axios.get(`${BASE_URL}/sortCount`)
-        .then(response => {
-          const data = response.data as MoviePage;
-          setPage(data);
-        });
-    }, [pageNumber]);
-  
     const handlePageChange = (newPageNumber : number) =>{
       setPageNumber(newPageNumber);
     };
@@ -59,4 +51,4 @@ function Sort() {
     );
   }
   
-  export default Sort;
+  export default SortScore;
