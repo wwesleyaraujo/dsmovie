@@ -1,5 +1,6 @@
 import { ReactComponent as Arrow } from 'assets/img/arrow.svg';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { MoviePage } from 'types/movies';
 import './styles.css';
 
@@ -24,9 +25,12 @@ function Pagination( {page, onChange } : Props) {
                         <Arrow className="dsmovie-flip-horizontal" />
                     </button>
                 </div>
-                <p> <button className="dsmovie-pagination-button-List">
-                    Listar 
-                </button>   </p>
+
+                <Link to={`/sort#`}> 
+                    <button className="dsmovie-pagination-button-List">
+                          Listar 
+                     </button> 
+                </Link>
             </div>
         </div>
     );

@@ -10,6 +10,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.devsuperior.dsmovie.entities.Movie;
 
 public interface MovieRepository extends JpaRepository<Movie, Long> {
-	final PageRequest page1 = PageRequest.of(0,10,Sort.by(Sort.Direction.DESC, "score"));
+	final PageRequest page1 = PageRequest.of(0,30,Sort.by(Sort.Direction.DESC, "score"));
 
 }
