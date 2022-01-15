@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { BASE_URL } from "utils/requests";
 import Pagination from "../../components/Pagination";
 import { MoviePage } from "types/movies";
+
 function Listing() {
 
 
