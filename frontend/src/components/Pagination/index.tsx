@@ -24,19 +24,6 @@ function Pagination( {page, onChange } : Props) {
                     <Arrow className="dsmovie-flip-horizontal" />
                 </button>
                 
-           </div> 
-          
-           <div className="dsmovie-pagination-box2">
-                <Link to={"/sortCount#"}> 
-                    <button className="vote"> Mais votados </button> 
-                </Link>  
-                <Link to={"/sortName#"}> 
-                    <button className="name"> A-Z</button>
-                </Link>
-                <Link to={"/sortScore#"}>
-                    <button className="score" > Mais  <StarFull/> </button> 
-                </Link>
-            
            </div>
         </div>
     );

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { BASE_URL } from "utils/requests";
 import Pagination from "../../components/Pagination";
 import { MoviePage } from "types/movies";
+import SortList from "components/SortList";
 
 function SortCount() {
 
@@ -38,6 +39,7 @@ function SortCount() {
     return (
       <div>
         <Pagination  page={page} onChange={handlePageChange}/>
+        <SortList  page={page} onChange={handlePageChange}/>
         <div className="container">
           <div className="row">
             {page.content.map(movie => (
