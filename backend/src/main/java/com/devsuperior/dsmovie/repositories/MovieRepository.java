@@ -11,7 +11,7 @@ import com.devsuperior.dsmovie.entities.Movie;
 
 public interface MovieRepository extends JpaRepository<Movie, Long> {
 	final PageRequest pageByScore = PageRequest.of(0,30,Sort.by(Sort.Direction.DESC, "score"));
-	final PageRequest pageByTitle = PageRequest.of(0,30,Sort.by(Sort.Direction.DESC, "title"));
+	final PageRequest pageByTitle = PageRequest.of(0,30,Sort.by(Sort.Direction.ASC, "title"));
 	final PageRequest pageByCount = PageRequest.of(0,30,Sort.by(Sort.Direction.DESC, "count"));
 
 }

@@ -19,6 +19,15 @@ function App() {
         <Route path="/form">
           <Route path=":movieId" element={<Form />} />
         </Route>
+        <Route path="sortCount/form">
+          <Route path=":movieId" element={<Form />} />
+        </Route>
+        <Route path="sortName/form">
+          <Route path=":movieId" element={<Form />} />
+        </Route>
+        <Route path="sortScore/form">
+          <Route path=":movieId" element={<Form />} />
+        </Route>
         <Route path="/sortCount" element={<SortCount/>}/>
         <Route path="/sortName" element={<SortName/>}/>
         <Route path="/sortScore" element={<SortScore/>}/>
