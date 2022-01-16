@@ -1,7 +1,5 @@
 import { ReactComponent as Arrow } from 'assets/img/arrow.svg';
-import { Link } from 'react-router-dom';
 import { MoviePage } from 'types/movies';
-import {ReactComponent as StarFull} from 'assets/img/star-full.svg';
 import './styles.css';
 
     type Props = {
