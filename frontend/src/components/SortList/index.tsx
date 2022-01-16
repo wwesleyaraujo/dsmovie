@@ -20,7 +20,7 @@ function SortList( {page, onChange } : Props) {
                     <button className="vote"> Mais votados </button> 
                 </Link>  
                 <Link to={"/sortName#"}> 
-                    <button className="name"> Z-A </button>
+                    <button className="name"> A-Z</button>
                 </Link>
                 <Link to={"/sortScore#"}>
                     <button className="score" > Mais  <StarFull/> </button> 
