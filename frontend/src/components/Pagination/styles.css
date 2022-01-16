@@ -81,6 +81,7 @@
     cursor: pointer;
     background-color:rgb(43, 46, 14);
     display: inline-block;
+    position: relative;
 }
 
 .dsmovie-pagination-box2 .name{
